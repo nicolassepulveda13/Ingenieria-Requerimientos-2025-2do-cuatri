@@ -14,19 +14,8 @@ Este repositorio contiene un portfolio web estático desarrollado con HTML, CSS 
 
 ## 🌐 Acceso al Portfolio
 
-El portfolio está disponible en GitHub Pages. Una vez configurado, estará accesible en:
-`https://[tu-usuario].github.io/Ingenieria-Requerimientos-2025-2do-cuatri/`
-
-## 🚀 Configuración de GitHub Pages
-
-Para activar GitHub Pages en este repositorio:
-
-1. Ve a la configuración del repositorio en GitHub (Settings)
-2. Navega a la sección "Pages" en el menú lateral
-3. En "Source", selecciona la rama `main` y la carpeta `/ (root)`
-4. Haz clic en "Save"
-5. Espera unos minutos para que GitHub publique el sitio
-6. Tu sitio estará disponible en la URL proporcionada por GitHub
+El portfolio está disponible en GitHub Pages:
+**https://nicolassepulveda13.github.io/Ingenieria-Requerimientos-2025-2do-cuatri/**
 
 ## 📁 Estructura del Proyecto
 

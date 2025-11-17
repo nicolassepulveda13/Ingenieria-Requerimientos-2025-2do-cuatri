@@ -33,16 +33,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll para enlaces internos
+    // Smooth scroll para enlaces internos (índice y otros)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                // Si es una tarjeta del índice, también activar el filtro correspondiente
+                const category = this.getAttribute('data-category');
+                if (category) {
+                    // Activar el filtro correspondiente
+                    filterButtons.forEach(btn => {
+                        if (btn.getAttribute('data-category') === category) {
+                            btn.click();
+                        }
+                    });
+                }
+                
+                // Scroll suave
+                setTimeout(() => {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, category ? 100 : 0);
             }
         });
     });
