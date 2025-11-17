@@ -7,14 +7,84 @@
     <meta name="keywords" content="Ingeniería de Requerimientos, Portfolio, UAI, Ingeniería en Sistemas">
     <title>Portfolio - Nicolas Sepulveda - Ingeniería de Requerimientos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3><i class="fas fa-bars"></i> Navegación</h3>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#info-personal" class="nav-item">
+                <i class="fas fa-user-graduate"></i>
+                <span>Información</span>
+            </a>
+            <a href="#fundamentos" class="nav-item" data-category="fundamentos">
+                <i class="fas fa-book"></i>
+                <span>Fundamentos</span>
+                <span class="nav-count">3</span>
+            </a>
+            <a href="#documentacion" class="nav-item" data-category="documentacion">
+                <i class="fas fa-file-alt"></i>
+                <span>Documentación</span>
+                <span class="nav-count">1</span>
+            </a>
+            <a href="#investigacion" class="nav-item" data-category="investigacion">
+                <i class="fas fa-search"></i>
+                <span>Investigación</span>
+                <span class="nav-count">2</span>
+            </a>
+            <a href="#modelado" class="nav-item" data-category="modelado">
+                <i class="fas fa-project-diagram"></i>
+                <span>Modelado</span>
+                <span class="nav-count">4</span>
+            </a>
+            <a href="#elicitacion" class="nav-item" data-category="elicitacion">
+                <i class="fas fa-comments"></i>
+                <span>Elicitación</span>
+                <span class="nav-count">3</span>
+            </a>
+            <a href="#especificacion" class="nav-item" data-category="especificacion">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Especificación</span>
+                <span class="nav-count">1</span>
+            </a>
+            <a href="#gestion" class="nav-item" data-category="gestion">
+                <i class="fas fa-tasks"></i>
+                <span>Gestión</span>
+                <span class="nav-count">3</span>
+            </a>
+            <a href="#procesos-ir" class="nav-item" data-category="procesos-ir">
+                <i class="fas fa-cogs"></i>
+                <span>Procesos IR</span>
+                <span class="nav-count">1</span>
+            </a>
+            <a href="#blackboard" class="nav-item" data-category="blackboard">
+                <i class="fas fa-graduation-cap"></i>
+                <span>BlackBoard</span>
+                <span class="nav-count">3</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <header>
         <div class="container">
             <h1>Portfolio de Ingeniería de Requerimientos</h1>
             <p class="subtitle">Nicolas Sepulveda - Trabajos realizados durante el cuatrimestre</p>
             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri" class="repo-link" target="_blank" rel="noopener noreferrer">
-                🔗 Ver Repositorio en GitHub
+                <i class="fab fa-github"></i> Ver Repositorio en GitHub
             </a>
         </div>
     </header>
@@ -52,49 +122,6 @@
             </div>
         </section>
 
-        <section id="indice" class="index-section">
-            <div class="container">
-                <h2>Índice de Trabajos</h2>
-                <div class="index-grid">
-                    <a href="#fundamentos" class="index-card" data-category="fundamentos">
-                        <h3>Fundamentos</h3>
-                        <p>3 trabajos</p>
-                    </a>
-                    <a href="#documentacion" class="index-card" data-category="documentacion">
-                        <h3>Documentación</h3>
-                        <p>1 trabajo</p>
-                    </a>
-                    <a href="#investigacion" class="index-card" data-category="investigacion">
-                        <h3>Investigación</h3>
-                        <p>2 trabajos</p>
-                    </a>
-                    <a href="#modelado" class="index-card" data-category="modelado">
-                        <h3>Modelado</h3>
-                        <p>4 trabajos</p>
-                    </a>
-                    <a href="#elicitacion" class="index-card" data-category="elicitacion">
-                        <h3>Elicitación</h3>
-                        <p>3 trabajos</p>
-                    </a>
-                    <a href="#especificacion" class="index-card" data-category="especificacion">
-                        <h3>Especificación</h3>
-                        <p>1 trabajo</p>
-                    </a>
-                    <a href="#gestion" class="index-card" data-category="gestion">
-                        <h3>Gestión</h3>
-                        <p>3 trabajos</p>
-                    </a>
-                    <a href="#procesos-ir" class="index-card" data-category="procesos-ir">
-                        <h3>Procesos de la IR</h3>
-                        <p>1 trabajo</p>
-                    </a>
-                    <a href="#blackboard" class="index-card" data-category="blackboard">
-                        <h3>Entregados en BlackBoard</h3>
-                        <p>3 trabajos</p>
-                    </a>
-                </div>
-            </div>
-        </section>
 
         <section id="filtros" class="filters-section">
             <div class="container">
@@ -129,7 +156,7 @@
                         <p class="description">Ejercitación sobre los conceptos fundamentales de software y su definición.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/fundamentos/Ejercitación obligatoria - Clase 1 - Software.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -144,7 +171,7 @@
                         <p class="topic"><strong>Tópico:</strong> Fundamentos: Requerimientos en el Ciclo de Vida</p>
                         <p class="description">Ejercitación sobre el rol de los requerimientos en el ciclo de vida del software.</p>
                         <div class="card-links">
-                            <span class="blackboard-notice">✅ Entregado en BlackBoard</span>
+                            <span class="blackboard-notice"><i class="fas fa-check-circle"></i> Entregado en BlackBoard</span>
                         </div>
                     </div>
                 </div>
@@ -159,7 +186,7 @@
                         <p class="description">Actividad sobre el ciclo de vida del software y la importancia de los requerimientos.</p>
                         <div class="card-links">
                             <a href="https://www.youtube.com/watch?v=ZEs3dwfJUMI" class="btn btn-video" target="_blank" rel="noopener noreferrer">
-                                ▶️ Ver Video en YouTube
+                                <i class="fab fa-youtube"></i> Ver Video en YouTube
                             </a>
                         </div>
                     </div>
@@ -176,7 +203,7 @@
                         <p class="description">Ejercitación sobre la estructura y organización de documentación en proyectos de software.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/documentacion/Ejercitación obligatoria - Clase 4 - EJEMPLO TRABAJO PRÁCTICO DE CURSADA.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -193,7 +220,7 @@
                         <p class="description">Trabajo de investigación sobre el uso del lenguaje natural en la Ingeniería de Requerimientos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/investigacion/Trabajo de investigación Lenguaje Natural e Ing. de Requerimientos.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -209,7 +236,7 @@
                         <p class="description">Trabajo de investigación adicional sobre temas relacionados con Ingeniería de Requerimientos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/investigacion/Actividad Trabajo de Investigación (Obligatorio).pdf" class="btn btn-document" download>
-                                📄 Descargar Documento PDF
+                                <i class="fas fa-download"></i> Descargar Documento PDF
                             </a>
                         </div>
                     </div>
@@ -226,7 +253,7 @@
                         <p class="description">Ejercitación práctica sobre la redacción de requerimientos usando lenguaje natural.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/modelado/Ejercitación individual obligatoria - Clase 10 - Uso del Lenguaje Natural.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -242,7 +269,7 @@
                         <p class="description">Ejercitación sobre diccionarios, glosarios y ontologías en la definición formal de conceptos. También conocido como "Trabajo Práctico Obligatorio".</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/modelado/Ejercitación obligatoria - Clase 11 - Diccionario, Glosario y Ontología.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -258,7 +285,7 @@
                         <p class="description">Ejercitación sobre la definición y uso de escenarios en la Ingeniería de Requerimientos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/modelado/Ejercitación Individual - Clase 13 - Escenarios.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -274,7 +301,7 @@
                         <p class="description">Actividad sobre modelado UML incluyendo casos de uso, historias de usuario y escenarios.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/modelado/ACTIVIDAD OBLIGATORIA_ Casos de Uso, Historias de Usuario y Escenarios.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -291,7 +318,7 @@
                         <p class="description">Primera entrevista de simulación y juego de roles para la elicitación de Requerimientos con IA. Incluye la interacción con la IA y la minuta con documentación de RF y RNF obtenidos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/elicitacion/Simulación Obtención de Requerimientos- Parte 1 .docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -307,7 +334,7 @@
                         <p class="description">Segunda entrevista de simulación y juego de roles para la elicitación de Requerimientos con IA. Incluye la interacción con la IA y la minuta con documentación de RF y RNF obtenidos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/elicitacion/Elicitación de Requerimientos con IA - Entrevista II.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -323,7 +350,7 @@
                         <p class="description">Tercera entrevista de simulación y juego de roles para la elicitación de Requerimientos con IA. Incluye la interacción con la IA y la minuta con documentación de RF y RNF obtenidos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/elicitacion/Desafío Final_ Simulación elicitación de requerimientos.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -340,7 +367,7 @@
                         <p class="description">Ejercitación práctica sobre la especificación formal de requerimientos en Ingeniería de Requerimientos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/especificacion/Ejercitación Práctica Especificación en Ingeniería de Requerimientos-final.pdf" class="btn btn-document" download>
-                                📄 Descargar Documento PDF
+                                <i class="fas fa-download"></i> Descargar Documento PDF
                             </a>
                         </div>
                     </div>
@@ -357,7 +384,7 @@
                         <p class="description">Primera entrega del trabajo práctico de cursada. Incluye el enunciado y la planificación del proyecto.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/gestion/TP Cursada - Primera Entrega_ Enunciado.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                         </div>
                     </div>
@@ -373,10 +400,10 @@
                         <p class="description">Segunda entrega del trabajo práctico de cursada con avances del proyecto.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/gestion/TP Entrega 2.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                             <a href="https://open.spotify.com/episode/0NCzjUn9ZJyzAtlimWznJU?si=fG_Wrv_eQ7uDqyVKcOYgcg" class="btn btn-podcast" target="_blank" rel="noopener noreferrer">
-                                🎙️ Escuchar Podcast
+                                <i class="fas fa-podcast"></i> Escuchar Podcast
                             </a>
                         </div>
                     </div>
@@ -392,10 +419,10 @@
                         <p class="description">Entrega final del trabajo práctico de cursada con el proyecto completo.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/gestion/TP Entrega Final.docx" class="btn btn-document" download>
-                                📄 Descargar Documento
+                                <i class="fas fa-download"></i> Descargar Documento
                             </a>
                             <a href="https://open.spotify.com/episode/3slAfnixAWcGayIf67IbuX?si=i7BixlcDRT25Pj__YEwkrg" class="btn btn-podcast" target="_blank" rel="noopener noreferrer">
-                                🎙️ Escuchar Podcast Final
+                                <i class="fas fa-podcast"></i> Escuchar Podcast Final
                             </a>
                         </div>
                     </div>
@@ -412,7 +439,7 @@
                         <p class="description">Actividad de aprendizaje sobre los procesos de la Ingeniería de Requerimientos.</p>
                         <div class="card-links">
                             <a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri/raw/main/docs/referencia/Clase%2B6.pdf" class="btn btn-document" download>
-                                📄 Descargar PDF
+                                <i class="fas fa-file-pdf"></i> Descargar PDF
                             </a>
                         </div>
                     </div>
@@ -428,9 +455,9 @@
                         <p class="topic"><strong>Tópico:</strong> Portfolio Web</p>
                         <p class="description">Portfolio web obligatorio para el final de la asignatura. Este sitio web contiene todos los trabajos realizados durante el cuatrimestre.</p>
                         <div class="card-links">
-                            <span class="blackboard-notice">✅ Portfolio disponible en GitHub Pages</span>
+                            <span class="blackboard-notice"><i class="fas fa-check-circle"></i> Portfolio disponible en GitHub Pages</span>
                             <a href="https://nicolassepulveda13.github.io/Ingenieria-Requerimientos-2025-2do-cuatri/" class="btn btn-document" target="_blank" rel="noopener noreferrer">
-                                🌐 Ver Portfolio
+                                <i class="fas fa-globe"></i> Ver Portfolio
                             </a>
                         </div>
                     </div>
@@ -443,7 +470,7 @@
         <div class="container">
             <p>&copy; 2025 - Portfolio de Ingeniería de Requerimientos</p>
             <p>Universidad Abierta Interamericana - Facultad de Tecnología Informática</p>
-            <p><a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Ver Repositorio en GitHub</a></p>
+            <p><a href="https://github.com/nicolassepulveda13/Ingenieria-Requerimientos-2025-2do-cuatri" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;"><i class="fab fa-github"></i> Ver Repositorio en GitHub</a></p>
         </div>
     </footer>
 

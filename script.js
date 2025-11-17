@@ -1,7 +1,50 @@
-// Funcionalidad de filtrado por categoría
+// Funcionalidad de filtrado por categoría y sidebar
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const workCards = document.querySelectorAll('.work-card');
+    const sidebar = document.getElementById('sidebar');
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const navItems = document.querySelectorAll('.nav-item[data-category]');
+
+    // Toggle sidebar en móvil
+    function toggleSidebar() {
+        sidebar.classList.toggle('open');
+        sidebarOverlay.classList.toggle('active');
+        document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+    }
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleSidebar);
+    }
+
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', toggleSidebar);
+    }
+
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', toggleSidebar);
+    }
+
+    // Navegación desde sidebar - activar filtro
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            const category = this.getAttribute('data-category');
+            if (category) {
+                // Activar el filtro correspondiente
+                filterButtons.forEach(btn => {
+                    if (btn.getAttribute('data-category') === category) {
+                        btn.click();
+                    }
+                });
+            }
+            // Cerrar sidebar en móvil después de hacer clic
+            if (window.innerWidth <= 1024) {
+                toggleSidebar();
+            }
+        });
+    });
 
     // Manejar clic en botones de filtro
     filterButtons.forEach(button => {
