@@ -244,12 +244,29 @@ h2 {
     padding: 1.5rem;
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-color) 100%);
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .card-header h3 {
     font-size: 1.3rem;
     color: var(--text-color);
     margin: 0;
+    flex: 1;
+    min-width: 250px;
+}
+
+.date-badge {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .badge {
@@ -344,6 +361,17 @@ h2 {
     background-color: #6d28d9;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.blackboard-notice {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #dcfce7;
+    color: #16a34a;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 2px solid #86efac;
 }
 
 /* Footer */
